@@ -2,6 +2,7 @@ class ApplicationMailer < ActionMailer::Base
   default from: 'from@example.com'
   layout 'mailer'
 
+<<<<<<< HEAD
   payload = {
     "members": [
         {
@@ -63,6 +64,8 @@ def template_maker
   end
 
  end
+=======
+>>>>>>> c4b2d44b5391341232ffdfe7c2bd6bd997d8d7f6
 end
 end
 
