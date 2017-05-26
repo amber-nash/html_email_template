@@ -5,21 +5,96 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta charset="utf-8">
       <title>HTML Email</title>
-        <style type="text/css">
-        </style>
-    </head>
-    <body>
-        <table width="100%" cellpadding="0" cellspacing="0">
-            <tr>
-                <td>
-                    <table class="content" align="center" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
+      <style type="text/css">
+
+       .rating {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+      }
+      .rating > span {
+        display: inline-block;
+        position: relative;
+        width: 1.1em;
+      }
+      .rating > span:hover:before,
+      .rating > span:hover ~ span:before {
+         content: "\2605";
+         position: absolute;
+      }
+
+      @media screen and (max-width: 600px) {
+
+        table[class="responsive-table"] {
+          width: 100% !important;
+          height: auto !important;
+        }
+
+        table[class="responsive-table2"] {
+          width: 100% !important;
+        }
+
+        img[class="responsive-image"] {
+          max-width: 100% !important;
+          height: auto !important:
+        }
+
+      h1[class="headline"] {
+        font-size: 20px !important;
+        color: white;
+
+      }
+    }
+    </style>
+  </head>
+<body>
+
+<!-- FULL WIDTH CONTAINER -->
+
+  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td align="center">
+
+    <!-- 600px CONTAINER -->
+
+        <table width="600" height="250" cellspacing="0" cellpadding="0" border="0" margin-bottom="0" class="responsive-table">
+          <tr>
+            <td bgcolor="#85C1E9" width="640" valign="top" class="100p">
+            <div style="padding: 65px;">
+              <h1 align="center" style="color: white;" class="headline"><font face="'Roboto', Arial, sans-serif">How was lunch?</h1>
+              <p align="center" style="color: white; font-size: 20px;">Give it a rating and let us know!</p>
+            </div>
+            </td>
+          </tr>
         </table>
-    </body>
+
+    <!-- STAR RATING -->
+
+        <table width="600" cellspacing="0" cellpadding="15" margin-top="0" bgcolor="#2980B9">
+          <tr>
+            <td align="center" style="font-size:24px; color:#FFFFFF;"><font face="'Roboto', Arial, sans-serif">
+              <div class="rating">
+                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+  <!-- MESSAGE -->
+        <table width="600" cellspacing="0" cellpadding="0" bgcolor="#EEF3F6" class="responsive-table2">
+            <tr>
+            <td style="padding: 10px;"><font face="'Roboto', Arial, sans-serif">
+              <p>Hi <%=@name%>! <br/> <br/> As an important part of the <%=@team%> team, we want to make sure our lunches are meeting your expectations. Help us choose better restaurants by giving us some feedback! Let us know how many stars you'd rate your last lunch. <br/> <br/> Feel free to review <%=@restaurant-name%> on their <%=@restraunt-yelp%>! <br/> <br/> Best, <br/> The Lunch Crew</p>
+            </td>
+          </table>
+  <!-- FOOTER -->
+          <table width="600" cellspacing="0" cellpadding="0" bgcolor="#2980B9" class="responsive-table2">
+            <tr>
+            <td align="center" style="a.color: white; padding: 20px 20px;"><font face="'Roboto', Arial, sans-serif">
+              <a href="http://apartmentlist.com">Apartment List</a>
+            </td>
+          </table>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
 </html>
