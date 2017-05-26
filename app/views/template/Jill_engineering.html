@@ -7,20 +7,15 @@
       <title>HTML Email</title>
       <style type="text/css">
 
-       .rating {
-        unicode-bidi: bidi-override;
-        direction: rtl;
-      }
-      .rating > span {
+      .buttons a div {
         display: inline-block;
-        position: relative;
-        width: 1.1em;
+        padding: 5px 15px;
+        color: white;
+        font-size: 16px;
+        background-color: #00ADF2;
       }
-      .rating > span:hover:before,
-      .rating > span:hover ~ span:before {
-         content: "\2605";
-         position: absolute;
-      }
+
+
 
       @media screen and (max-width: 600px) {
 
@@ -41,6 +36,8 @@
       h1[class="headline"] {
         font-size: 20px !important;
         color: white;
+        display: inline-block;
+
 
       }
     }
@@ -58,10 +55,11 @@
 
         <table width="600" height="250" cellspacing="0" cellpadding="0" border="0" margin-bottom="0" class="responsive-table">
           <tr>
-            <td bgcolor="#85C1E9" width="640" valign="top" class="100p">
+            <td bgcolor="#FFFFFF" width="640" valign="top" class="100p">
             <div style="padding: 65px;">
-              <h1 align="center" style="color: white;" class="headline"><font face="'Roboto', Arial, sans-serif">How was lunch?</h1>
-              <p align="center" style="color: white; font-size: 20px;">Give it a rating and let us know!</p>
+              <img style="width: 125px;" src="https://pbs.twimg.com/profile_images/727655574192594944/vI9KnkSL.jpg">
+              <h1 align="center" style="color: black; display:inline-block;" class="headline"><font face="'Roboto', Arial, sans-serif">Thanks for coming to Family Friday lunch!</h1>
+              <p align="center" style="color: grey; font-size: 20px;">May 26, 2017 at 12:00 PM</p>
             </div>
             </td>
           </tr>
@@ -69,11 +67,13 @@
 
     <!-- STAR RATING -->
 
-        <table width="600" cellspacing="0" cellpadding="15" margin-top="0" bgcolor="#2980B9">
+        <table width="600" cellspacing="0" cellpadding="15" margin-top="0" bgcolor="#FFFFFF">
           <tr>
             <td align="center" style="font-size:24px; color:#FFFFFF;"><font face="'Roboto', Arial, sans-serif">
-              <div class="rating">
-                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+              <div class="buttons">
+                <a href="#"><div>Nope</div></a>
+                <a href="#"><div>Maybe</div></a>
+                <a href="#"><div>Loved It!</div></a>
               </div>
             </td>
           </tr>
@@ -82,14 +82,16 @@
         <table width="600" cellspacing="0" cellpadding="0" bgcolor="#EEF3F6" class="responsive-table2">
             <tr>
             <td style="padding: 10px;"><font face="'Roboto', Arial, sans-serif">
-              <p>Hi Jill! <br/> <br/> As an important part of the engineering team, we want to make sure our lunches are meeting your expectations. Help us choose better restaurants by giving us some feedback! Let us know how many stars you'd rate your last lunch. <br/> <br/> Feel free to review Pizza R Us on their <a href="https://yelp.com/pizza-r-us">Yelp page</a>! <br/> <br/> Best, <br/> The Lunch Crew</p>
+              <p>Hi Jill! <br/> <br/> As an important part of the engineering team, we want to make sure our lunches are meeting your expectations. Help us choose better restaurants by giving us some feedback! Let us know how many stars you'd rate your last lunch. <br/> <br/> Feel free to review Pizza R Us on their <a href="https://yelp.com/pizza-r-us/?utm_source=lunchrating&utm_medium=email&utm_campaign=lunch&utm_content=yelp">Yelp page</a><! <br/> <br/> Best, <br/> The Lunch Crew</p>
+
             </td>
           </table>
   <!-- FOOTER -->
           <table width="600" cellspacing="0" cellpadding="0" bgcolor="#2980B9" class="responsive-table2">
             <tr>
             <td align="center" style="a.color: white; padding: 20px 20px;"><font face="'Roboto', Arial, sans-serif">
-              <a href="http://apartmentlist.com">Apartment List</a>
+              <a href="http://apartmentlist.com/?utm_source=lunchrating&utm_medium=email&utm_campaign=lunch&utm_content=apartmentlist">Apartment List</a>
+
             </td>
           </table>
         </table>
