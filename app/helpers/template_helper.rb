@@ -24,7 +24,7 @@ def template_maker(payload)
     @email = "#{val[:email]}"
     @logo = "#{restaurants[:logo]}"
     @restaurant_name = "#{restaurants[:name]}"
-    @yelp = "#{restaurants[:yelp]}"
+    @yelp = "#{restaurants[:yelp_link]}"
 
     #Render template
     template = File.read('../views/template/template.html.erb')
