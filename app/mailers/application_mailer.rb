@@ -44,6 +44,7 @@ class ApplicationMailer < ActionMailer::Base
 #Create ERB variables for html templating
 #Loop through payload creating customized templates
 #Create new files
+def template_maker
   members.each do |val|
     @name = "#{val[:name]}"
     @team = "#{val[:team]}"
@@ -57,10 +58,12 @@ class ApplicationMailer < ActionMailer::Base
   result = ERB.new(template).result(binding)
 
   #Write result to new file
-  File.open("#{name}_#{team}.html"), 'w+') do |f|
+  File.open("#{name}_#{team}.html") do |f|
     f.write result
   end
 
  end
-
 end
+end
+
+template_maker
